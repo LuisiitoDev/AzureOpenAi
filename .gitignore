@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Chatbot/CostaRicaBeaches.Api/.vs/CostaRicaBeaches.Api
+/Chatbot/CostaRicaBeaches.Api/obj
+/Chatbot/CostaRicaBeaches.Api/bin/Debug/net8.0
