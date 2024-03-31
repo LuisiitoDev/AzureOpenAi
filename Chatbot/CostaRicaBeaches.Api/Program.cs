@@ -79,17 +79,14 @@ builder.Services.AddAuthorizationBuilder()
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Costa Rica v1");
-        c.OAuthClientId(builder.Configuration["AzureAdB2CSwagger:OpenIdClientId"]!);
-        c.OAuthUsePkce();
-        c.OAuthScopeSeparator(" ");
-    });
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Costa Rica v1");
+    c.OAuthClientId(builder.Configuration["AzureAdB2CSwagger:OpenIdClientId"]!);
+    c.OAuthUsePkce();
+    c.OAuthScopeSeparator(" ");
+});
 
 app.UseAuthentication();
 app.UseAuthorization();
