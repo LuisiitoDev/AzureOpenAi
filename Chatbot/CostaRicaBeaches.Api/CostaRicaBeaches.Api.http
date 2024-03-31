@@ -1,0 +1,6 @@
+@CostaRicaBeaches.Api_HostAddress = http://localhost:5223
+
+GET {{CostaRicaBeaches.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
